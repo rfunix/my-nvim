@@ -1,0 +1,64 @@
+local ensure_packer = function()
+  local fn = vim.fn
+  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  if fn.empty(fn.glob(install_path)) > 0 then
+    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    vim.cmd [[packadd packer.nvim]]
+    return true
+  end
+  return false
+end
+
+local packer_bootstrap = ensure_packer()
+
+return require('packer').startup(function(use)
+  -- plugin manager
+  use 'wbthomason/packer.nvim'
+
+  -- themes
+  use 'ellisonleao/gruvbox.nvim'
+  use 'nvim-tree/nvim-tree.lua'
+  use 'nvim-tree/nvim-web-devicons'
+  use 'nvim-lualine/lualine.nvim'
+
+  -- syntax highlighting
+  use {'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
+      }
+
+  -- finders
+  use "nvim-lua/plenary.nvim"
+  use {'nvim-telescope/telescope.nvim', tag = '0.1.1'}
+
+  -- clojure repl
+  use 'Olical/conjure'
+
+  -- lsp
+  use {'neovim/nvim-lspconfig', mode = 'lspconfig'}
+
+  -- autocomplete
+  use {"hrsh7th/nvim-cmp",
+        requires = {
+            "hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp",
+            'quangnguyen30192/cmp-nvim-ultisnips', 'hrsh7th/cmp-nvim-lua',
+            'octaltree/cmp-look', 'hrsh7th/cmp-path', 'hrsh7th/cmp-calc',
+            'f3fora/cmp-spell', 'hrsh7th/cmp-emoji'
+        }
+    }
+
+  use 'github/copilot.vim'
+
+  use 'guns/vim-sexp'
+  use 'luochen1990/rainbow'
+
+  use 'sainnhe/gruvbox-material'
+
+  -- Automatically set up your configuration after cloning packer.nvim
+  -- Put this at the end after all plugins
+  if packer_bootstrap then
+    require('packer').sync()
+  end
+end)
