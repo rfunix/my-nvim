@@ -56,14 +56,12 @@ local cmp = require'cmp'
 
   -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
   cmp.setup.cmdline(':', {
-    mapping = cmp.mapping.preset.cmdline(),
-    sources = cmp.config.sources({
-      { name = 'path' }
+  sources = cmp.config.sources({
+    { name = 'path' }
     }, {
-      { name = 'cmdline' }
-    })
+    { name = 'cmdline' }
   })
-
+  })
   -- Set up lspconfig.
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
   -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.

@@ -58,6 +58,27 @@ return require('packer').startup(function(use)
 
   use 'tpope/vim-surround'
 
+  -- manager lsp
+  use {
+    "williamboman/mason.nvim",
+    run = ":MasonUpdate" -- :MasonUpdate updates registry contents
+  }
+   
+  -- welcome vim
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.config)
+    end
+  }
+
+  -- git plugin
+  use 'airblade/vim-gitgutter'
+
+  -- mult cursor mode
+  use 'mg979/vim-visual-multi'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
