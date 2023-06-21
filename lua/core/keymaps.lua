@@ -10,6 +10,12 @@ vim.opt.autoread = true
 vim.wo.relativenumber = true
 vim.wo.number = true
 vim.wo.wrap = false
+vim.opt.inccommand = "split"
+vim.opt.swapfile = false
+vim.opt.mouse = "a"
+vim.opt.wildmenu = true
+vim.opt.ttimeoutlen = 0
+vim.opt.updatetime = 250
 
 -- use spaces for tabs
 vim.opt.tabstop = 2
