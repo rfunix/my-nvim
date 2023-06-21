@@ -15,6 +15,9 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.shiftround = true
 vim.opt.expandtab = true
+
+-- enable copy to clipboard
+vim.opt.clipboard = "unnamedplus"
       
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 
