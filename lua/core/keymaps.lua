@@ -8,6 +8,7 @@ vim.opt.autowrite = true
 vim.opt.cursorline = true
 vim.opt.autoread = true
 vim.wo.relativenumber = true
+vim.wo.number = true
 vim.wo.wrap = false
 
 -- use spaces for tabs
