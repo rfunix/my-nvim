@@ -16,7 +16,11 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- themes
+  use 'sainnhe/gruvbox-material'
   use 'ellisonleao/gruvbox.nvim'
+
+  use 'echasnovski/mini.nvim'
+
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
@@ -54,7 +58,6 @@ return require('packer').startup(function(use)
   use 'guns/vim-sexp'
   use 'luochen1990/rainbow'
 
-  use 'sainnhe/gruvbox-material'
 
   use 'tpope/vim-surround'
 
@@ -63,7 +66,6 @@ return require('packer').startup(function(use)
     "williamboman/mason.nvim",
     run = ":MasonUpdate" -- :MasonUpdate updates registry contents
   }
-   
   -- welcome vim
   use {
     'goolord/alpha-nvim',

@@ -39,6 +39,6 @@ vim.keymap.set("n", "<C-L>", "<C-W><C-L>", {noremap = true})
 vim.keymap.set("n", "<C-H>", "<C-W><C-H>", {noremap = true})
 
 -- tabs
-vim.keymap.set("n", "<leader>tp", ":tabp", {noremap = true})
+vim.keymap.set("n", "<leader>tp", ":tabp<cr>", {noremap = true})
 vim.keymap.set("n", "<leader>t<leader>", ":tabn<cr>", {noremap = true})
 vim.keymap.set("n", "<leader>tn", ":tabnew<cr>", {noremap = true})
