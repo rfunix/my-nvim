@@ -18,12 +18,15 @@ return require('packer').startup(function(use)
   -- themes
   use 'sainnhe/gruvbox-material'
   use 'ellisonleao/gruvbox.nvim'
+  use 'shaunsingh/nord.nvim'
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   use 'echasnovski/mini.nvim'
 
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
+  use 'xiyaowong/transparent.nvim'
 
   -- syntax highlighting
   use {'nvim-treesitter/nvim-treesitter',

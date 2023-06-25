@@ -1,17 +1,19 @@
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 -- Setup language servers.
 local lspconfig = require('lspconfig')
+
 lspconfig.pyright.setup {}
 lspconfig.tsserver.setup {}
-require'lspconfig'.clojure_lsp.setup{}
-require'lspconfig'.lua_ls.setup {}
+lspconfig.clojure_lsp.setup{}
+lspconfig.lua_ls.setup {}
+lspconfig.jedi_language_server.setup {}
+
 lspconfig.rust_analyzer.setup {
   -- Server-specific settings. See `:help lspconfig-setup`
   settings = {
     ['rust-analyzer'] = {},
   },
 }
-
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
