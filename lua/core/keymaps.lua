@@ -42,3 +42,13 @@ vim.keymap.set("n", "<C-H>", "<C-W><C-H>", {noremap = true})
 vim.keymap.set("n", "<leader>tp", ":tabp<cr>", {noremap = true})
 vim.keymap.set("n", "<leader>t<leader>", ":tabn<cr>", {noremap = true})
 vim.keymap.set("n", "<leader>tn", ":tabnew<cr>", {noremap = true})
+
+
+--Move to the previous buffer with "gp"
+vim.keymap.set("n", "gp", ":bp<CR>", {noremap = true})
+--Move to the next buffer with "gn"
+vim.keymap.set("n", "gn", ":bn<CR>", {noremap = true})
+--List all possible buffers with "gl"
+vim.keymap.set("n", "gl", ":ls<CR>", {noremap = true})
+--List all possible buffers with "gb" and accept a new buffer argument [1]
+vim.keymap.set("n", "gb", ":ls<CR>:b", {noremap = true})
