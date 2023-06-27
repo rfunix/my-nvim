@@ -110,6 +110,8 @@ return require('packer').startup(function(use)
     config = function() return require("tmux").setup() end
   })
 
+  use { 'tpope/vim-sexp-mappings-for-regular-people' }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
