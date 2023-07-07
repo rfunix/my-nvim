@@ -4,9 +4,11 @@ local lspconfig = require('lspconfig')
 
 lspconfig.pyright.setup {}
 lspconfig.tsserver.setup {}
-lspconfig.clojure_lsp.setup{}
+lspconfig.clojure_lsp.setup {}
 lspconfig.lua_ls.setup {}
 lspconfig.jedi_language_server.setup {}
+lspconfig.jsonls.setup {}
+lspconfig.gopls.setup {}
 
 lspconfig.rust_analyzer.setup {
   -- Server-specific settings. See `:help lspconfig-setup`
